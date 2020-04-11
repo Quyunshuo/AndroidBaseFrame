@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 def config = rootProject.ext
 
@@ -7,13 +7,13 @@ android {
     buildToolsVersion config.android.buildToolsVersion
 
     defaultConfig {
-        applicationId config.android.applicationId
         minSdkVersion config.android.minSdkVersion
         targetSdkVersion config.android.targetSdkVersion
         versionCode config.android.versionCode
         versionName config.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -37,17 +37,16 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    resourcePrefix "base_"
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    if (!rootProject.ext.isApp) {
-        implementation project(path: ':lib_main')
-        implementation project(path: ':lib_xxx')
-    }
+    config.base.each { key, value -> api value }
 }

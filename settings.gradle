@@ -1,2 +1,6 @@
 rootProject.name='AndroidBaseFrame'
 include ':app'
+include ':lib_comm'
+include ':lib_base'
+include ':lib_main'
+include ':lib_xxx'

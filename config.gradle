@@ -1,0 +1,26 @@
+ext {
+    // 控制lib的模式
+    isApp = false
+
+    // 项目配置版本相关
+    android = [
+            applicationId    : "com.quyunshuo.androidbaseframe",
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.3",
+            minSdkVersion    : 19,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    // 全局依赖版本相关
+    base = [
+            "appcompat"       : 'androidx.appcompat:appcompat:1.1.0',
+            "constraintlayout": 'androidx.constraintlayout:constraintlayout:1.1.3',
+    ]
+
+    // 注解相关
+    annotationProcessors = [
+
+    ]
+}

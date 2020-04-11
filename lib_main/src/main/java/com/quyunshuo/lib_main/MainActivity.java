@@ -1,4 +1,4 @@
-package com.quyunshuo.androidbaseframe;
+package com.quyunshuo.lib_main;
 
 import androidx.appcompat.app.AppCompatActivity;
 

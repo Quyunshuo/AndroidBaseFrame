@@ -1,4 +1,9 @@
-apply plugin: 'com.android.application'
+// 业务lib公共配置
+if (rootProject.ext.isApp) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 
 def config = rootProject.ext
 
@@ -7,13 +12,13 @@ android {
     buildToolsVersion config.android.buildToolsVersion
 
     defaultConfig {
-        applicationId config.android.applicationId
         minSdkVersion config.android.minSdkVersion
         targetSdkVersion config.android.targetSdkVersion
         versionCode config.android.versionCode
         versionName config.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -37,17 +42,27 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    //根据不同的模式加载不同的AndroidManifest文件
+    sourceSets {
+        main {
+            if (rootProject.ext.isApp) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    //排除debug文件夹下的所有文件
+                    exclude 'debug/**'
+                }
+            }
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    if (!rootProject.ext.isApp) {
-        implementation project(path: ':lib_main')
-        implementation project(path: ':lib_xxx')
-    }
+    api project(path: ':lib_comm')
+
+    config.annotationProcessors.each { key, value -> annotationProcessor value }
 }
