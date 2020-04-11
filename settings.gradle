@@ -1,0 +1,2 @@
+rootProject.name='AndroidBaseFrame'
+include ':app'
