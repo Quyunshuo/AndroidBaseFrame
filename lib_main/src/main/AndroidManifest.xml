@@ -3,9 +3,9 @@
     package="com.quyunshuo.main" >
 
     <application>
-        <activity android:name="com.quyunshuo.main.DebugMainActivity" >
+        <activity android:name="com.quyunshuo.main.debug.DebugMainActivity" >
         </activity>
-        <activity android:name="com.quyunshuo.main.MainActivity" >
+        <activity android:name="com.quyunshuo.main.ui.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

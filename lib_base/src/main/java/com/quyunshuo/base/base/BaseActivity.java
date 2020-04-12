@@ -9,8 +9,11 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.quyunshuo.base.capsulation.BaseEvent;
 import com.quyunshuo.base.capsulation.EventBusBinding;
 import com.quyunshuo.base.capsulation.EventBusUtil;
+
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 
@@ -85,6 +88,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public Context getContext() {
         return this;
+    }
+
+    @Subscribe
+    public void getEvent(BaseEvent even) {
     }
 
     @Override

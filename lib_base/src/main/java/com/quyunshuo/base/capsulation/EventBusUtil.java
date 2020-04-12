@@ -36,7 +36,6 @@ public class EventBusUtil {
      */
     public static void postStickyEvent(Object event) {
         EventBus.getDefault().postSticky(event);
-
     }
 
     /**

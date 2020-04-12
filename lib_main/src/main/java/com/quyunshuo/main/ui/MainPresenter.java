@@ -1,13 +1,13 @@
-package com.quyunshuo.main;
+package com.quyunshuo.main.ui;
 
 import androidx.lifecycle.LifecycleOwner;
 
 import com.quyunshuo.base.base.mvp.BaseLifecyclePresenter;
 
-public class MainPresenter extends BaseLifecyclePresenter<IMainContract.View>
-        implements IMainContract.Presenter {
+public class MainPresenter extends BaseLifecyclePresenter<MainContract.View>
+        implements MainContract.Presenter {
 
-    MainPresenter(IMainContract.View view) {
+    MainPresenter(MainContract.View view) {
         super(view);
     }
 

@@ -3,10 +3,11 @@
     package="com.quyunshuo.xxx">
 
     <application
+        android:name="com.quyunshuo.comm.CommApplication"
         android:allowBackup="true"
         android:label="@string/xxx_app_name"
         android:theme="@style/xxx_AppTheme">
-        <activity android:name=".DebugXXXActivity">
+        <activity android:name=".debug.DebugXXXActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

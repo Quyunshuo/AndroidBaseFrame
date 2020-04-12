@@ -11,8 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.quyunshuo.base.capsulation.BaseEvent;
 import com.quyunshuo.base.capsulation.EventBusBinding;
 import com.quyunshuo.base.capsulation.EventBusUtil;
+
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 
@@ -94,6 +97,10 @@ public abstract class BaseFragment extends Fragment {
      */
     protected <T extends View> T find(int id) {
         return mFragmentView.findViewById(id);
+    }
+
+    @Subscribe
+    public void getEvent(BaseEvent event) {
     }
 
     @Override
