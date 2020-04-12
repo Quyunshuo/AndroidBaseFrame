@@ -1,7 +1,13 @@
 apply from: '../module.gradle'
 
 android {
+
     resourcePrefix "main_"
+
+    // 打开ViewBinding
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
