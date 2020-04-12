@@ -1,14 +1,31 @@
 package com.quyunshuo.main;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
 
-import android.os.Bundle;
+import com.quyunshuo.base.base.mvp.BaseLifecycleActivity;
+import com.quyunshuo.main.databinding.MainActivityBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseLifecycleActivity<IMainContract.Presenter> implements IMainContract.View {
+
+    private MainActivityBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected View getViewBinding() {
+        binding = MainActivityBinding.inflate(getLayoutInflater());
+        return binding.getRoot();
+    }
+
+    @Override
+    protected void initView() {
+    }
+
+    @Override
+    protected IMainContract.Presenter getPresenter() {
+        return new MainPresenter(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

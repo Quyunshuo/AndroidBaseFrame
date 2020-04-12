@@ -2,6 +2,7 @@ package com.quyunshuo.base.base;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 
@@ -14,7 +15,7 @@ import java.util.ArrayList;
  * @Author: QuYunShuo
  * @Time: 2020/4/12
  * @Class: BaseActivity
- * @Remark:
+ * @Remark: Activity基类
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -73,6 +74,10 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected <T extends View> T find(int id) {
         return findViewById(id);
+    }
+
+    public Context getContext() {
+        return this;
     }
 
     @Override

@@ -17,7 +17,7 @@ import java.util.ArrayList;
  * @Author: QuYunShuo
  * @Time: 2020/4/12
  * @Class: BaseFragment
- * @Remark:
+ * @Remark: Fragment基类
  */
 public abstract class BaseFragment extends Fragment {
 
@@ -40,8 +40,13 @@ public abstract class BaseFragment extends Fragment {
         } else {
             mFragmentView = inflater.inflate(getLayoutId(), container, false);
         }
-        initView();
         return mFragmentView;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initView();
     }
 
     /**
