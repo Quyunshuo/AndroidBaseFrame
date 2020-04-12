@@ -9,6 +9,9 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.quyunshuo.base.capsulation.EventBusBinding;
+import com.quyunshuo.base.capsulation.EventBusUtil;
+
 import java.util.ArrayList;
 
 /**
@@ -37,6 +40,10 @@ public abstract class BaseActivity extends AppCompatActivity {
             setContentView(getViewBinding());
         } else {
             setContentView(getLayoutId());
+        }
+        // EventBus注册
+        if (this.getClass().isAnnotationPresent(EventBusBinding.class)) {
+            EventBusUtil.register(this);
         }
         initView();
     }
@@ -96,5 +103,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         mAnimatorSets.clear();
         mAnimatorSets = null;
         super.onDestroy();
+        // EventBus解除注册
+        if (this.getClass().isAnnotationPresent(EventBusBinding.class)) {
+            EventBusUtil.unRegister(this);
+        }
     }
 }

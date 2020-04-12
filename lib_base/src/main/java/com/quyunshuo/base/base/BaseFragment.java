@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.quyunshuo.base.capsulation.EventBusBinding;
+import com.quyunshuo.base.capsulation.EventBusUtil;
+
 import java.util.ArrayList;
 
 /**
@@ -30,6 +33,10 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // EventBus注册
+        if (this.getClass().isAnnotationPresent(EventBusBinding.class)) {
+            EventBusUtil.register(this);
+        }
     }
 
     @Nullable
@@ -110,5 +117,9 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        // EventBus解除注册
+        if (this.getClass().isAnnotationPresent(EventBusBinding.class)) {
+            EventBusUtil.unRegister(this);
+        }
     }
 }
