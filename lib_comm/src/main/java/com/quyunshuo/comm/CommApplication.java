@@ -1,6 +1,6 @@
-package com.quyunshuo.lib_comm;
+package com.quyunshuo.comm;
 
-import com.quyunshuo.lib_base.BaseApplication;
+import com.quyunshuo.base.BaseApplication;
 
 /**
  * @Author: QuYunShuo

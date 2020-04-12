@@ -1,4 +1,4 @@
-package com.quyunshuo.lib_base;
+package com.quyunshuo.main;
 
 import org.junit.Test;
 

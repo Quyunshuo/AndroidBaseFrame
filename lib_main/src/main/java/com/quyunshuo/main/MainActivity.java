@@ -1,13 +1,14 @@
-package com.quyunshuo.lib_main;
+package com.quyunshuo.main;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class DebugMainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_debug_main);
+        setContentView(R.layout.activity_main);
     }
 }

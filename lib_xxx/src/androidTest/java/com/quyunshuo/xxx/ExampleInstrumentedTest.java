@@ -1,4 +1,4 @@
-package com.quyunshuo.lib_xxx;
+package com.quyunshuo.xxx;
 
 import android.content.Context;
 

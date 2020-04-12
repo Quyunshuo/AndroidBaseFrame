@@ -1,4 +1,4 @@
-package com.quyunshuo.lib_main;
+package com.quyunshuo.comm;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.quyunshuo.lib_main.test", appContext.getPackageName());
+        assertEquals("com.quyunshuo.lib_comm.test", appContext.getPackageName());
     }
 }

@@ -1,6 +1,6 @@
 package com.quyunshuo.androidbaseframe;
 
-import com.quyunshuo.lib_comm.CommApplication;
+import com.quyunshuo.comm.CommApplication;
 
 /**
  * @Author: QuYunShuo
