@@ -1,4 +1,4 @@
-package com.quyunshuo.base.capsulation;
+package com.quyunshuo.base.capsulation.eventbus;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

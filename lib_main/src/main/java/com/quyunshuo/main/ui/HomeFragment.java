@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.quyunshuo.base.base.mvp.BaseLifecycleFragment;
-import com.quyunshuo.base.capsulation.EventBusBinding;
+import com.quyunshuo.base.capsulation.eventbus.EventBusBinding;
 import com.quyunshuo.comm.route.RouteUrl;
 import com.quyunshuo.main.databinding.MainHomeFragmentBinding;
 

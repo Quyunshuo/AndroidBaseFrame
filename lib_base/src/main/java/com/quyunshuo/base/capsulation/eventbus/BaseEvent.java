@@ -1,4 +1,4 @@
-package com.quyunshuo.base.capsulation;
+package com.quyunshuo.base.capsulation.eventbus;
 
 /**
  * @Author: QuYunShuo

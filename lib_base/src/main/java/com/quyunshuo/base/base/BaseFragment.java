@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.quyunshuo.base.capsulation.BaseEvent;
-import com.quyunshuo.base.capsulation.EventBusBinding;
-import com.quyunshuo.base.capsulation.EventBusUtil;
+import com.quyunshuo.base.capsulation.eventbus.BaseEvent;
+import com.quyunshuo.base.capsulation.eventbus.EventBusBinding;
+import com.quyunshuo.base.capsulation.eventbus.EventBusUtil;
 
 import org.greenrobot.eventbus.Subscribe;
 

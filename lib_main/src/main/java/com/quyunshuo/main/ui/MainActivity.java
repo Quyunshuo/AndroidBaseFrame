@@ -9,7 +9,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.quyunshuo.base.base.BaseFragment;
 import com.quyunshuo.base.base.mvp.BaseLifecycleActivity;
-import com.quyunshuo.base.capsulation.EventBusBinding;
+import com.quyunshuo.base.capsulation.eventbus.EventBusBinding;
 import com.quyunshuo.comm.route.RouteUrl;
 import com.quyunshuo.main.R;
 import com.quyunshuo.main.databinding.MainActivityBinding;
