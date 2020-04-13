@@ -15,15 +15,27 @@ ext {
 
     // 全局依赖版本相关
     base = [
-            "appcompat"       : 'androidx.appcompat:appcompat:1.1.0',
-            "constraintlayout": 'androidx.constraintlayout:constraintlayout:1.1.3',
-            "eventbus"        : 'org.greenrobot:eventbus:3.2.0',
-            "arouter"         : 'com.alibaba:arouter-api:1.5.0',
-            "mmkv"            : 'com.tencent:mmkv-static:1.1.0',
+            "AppCompat"          : 'androidx.appcompat:appcompat:1.1.0',
+            "ConstraintLayout"   : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            "EventBus"           : 'org.greenrobot:eventbus:3.2.0',
+            "ARouter"            : 'com.alibaba:arouter-api:1.5.0',
+            "MMKV"               : 'com.tencent:mmkv-static:1.1.0',
+            "RecyclerView"       : 'androidx.recyclerview:recyclerview:1.0.0',
+            "AdapterHelper"      : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2',
+            "RxAndroid"          : 'io.reactivex.rxjava2:rxandroid:2.1.1',
+            "RxJava"             : 'io.reactivex.rxjava2:rxjava:2.1.1',
+            "OkHttp"             : 'com.squareup.okhttp3:okhttp:3.10.0',
+            "Retrofit"           : 'com.squareup.retrofit2:retrofit:2.4.0',
+            "Converter-Gson"     : 'com.squareup.retrofit2:converter-gson:2.4.0',
+            "Adapter-RxJava"     : 'com.squareup.retrofit2:adapter-rxjava2:2.4.0',
+            "Logging-Interceptor": 'com.squareup.okhttp3:logging-interceptor:3.9.1',
+            "Gson"               : 'com.google.code.gson:gson:2.8.5',
+            "Glide"              : 'com.github.bumptech.glide:glide:4.10.0',
     ]
 
     // 注解相关
     annotationProcessors = [
-            "arouter-compiler": "com.alibaba:arouter-compiler:1.2.2",
+            "Arouter-Compiler": 'com.alibaba:arouter-compiler:1.2.2',
+            "Glide"           : 'com.github.bumptech.glide:compiler:4.10.0'
     ]
 }
