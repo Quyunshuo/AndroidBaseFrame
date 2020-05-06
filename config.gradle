@@ -35,7 +35,8 @@ ext {
 
     // 注解相关
     annotationProcessors = [
-            "Arouter-Compiler": 'com.alibaba:arouter-compiler:1.2.2',
-            "Glide"           : 'com.github.bumptech.glide:compiler:4.10.0'
+            "Arouter-Compiler"             : 'com.alibaba:arouter-compiler:1.2.2',
+            "Glide"                        : 'com.github.bumptech.glide:compiler:4.10.0',
+            "EventBus-Annotation-Processor": 'org.greenrobot:eventbus-annotation-processor:3.2.0'
     ]
 }

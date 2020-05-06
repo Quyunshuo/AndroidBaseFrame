@@ -8,6 +8,14 @@ android {
     viewBinding {
         enabled = true
     }
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(),
+                             eventBusIndex      : 'com.example.myapp.XxxEventBusIndex']
+            }
+        }
+    }
 }
 
 dependencies {

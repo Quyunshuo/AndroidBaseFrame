@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.quyunshuo.main" >
+    package="com.quyunshuo.main">
 
     <application>
-        <activity android:name="com.quyunshuo.main.debug.DebugMainActivity" >
-        </activity>
-        <activity android:name="com.quyunshuo.main.ui.MainActivity" >
+        <activity android:name="com.quyunshuo.main.debug.DebugMainActivity" />
+        <activity android:name="com.quyunshuo.main.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

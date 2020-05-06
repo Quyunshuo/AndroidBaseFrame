@@ -12,6 +12,8 @@ import com.quyunshuo.base.capsulation.eventbus.EventBusBinding;
 import com.quyunshuo.comm.route.RouteUrl;
 import com.quyunshuo.xxx.databinding.XxxFragmentBinding;
 
+import org.greenrobot.eventbus.Subscribe;
+
 /**
  * @Author: QuYunShuo
  * @Time: 2020/4/12
@@ -38,5 +40,12 @@ public class XxxFragment extends BaseLifecycleFragment<XxxContract.Presenter> im
     @Override
     protected void initView() {
         mViewBinding.tv.setOnClickListener(v -> Toast.makeText(getContext(), "Test", Toast.LENGTH_SHORT).show());
+    }
+
+    /**
+     * 为了生成索引类 每个lib必须要有一个订阅方法 如果有了其他的订阅方法 此订阅方法可以删除
+     */
+    @Subscribe
+    public void testEventIndex(String event) {
     }
 }
