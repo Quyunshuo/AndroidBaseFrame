@@ -1,8 +1,8 @@
 package com.quyunshuo.androidbaseframe;
 
-import com.example.myapp.MainEventBusIndex;
-import com.example.myapp.XxxEventBusIndex;
 import com.quyunshuo.comm.CommApplication;
+import com.quyunshuo.eventbus.index.MainEventBusIndex;
+import com.quyunshuo.eventbus.index.XxxEventBusIndex;
 
 import org.greenrobot.eventbus.EventBus;
 

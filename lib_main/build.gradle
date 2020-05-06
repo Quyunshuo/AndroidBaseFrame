@@ -12,7 +12,7 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName(),
-                             eventBusIndex      : 'com.example.myapp.MainEventBusIndex']
+                             eventBusIndex      : 'com.quyunshuo.eventbus.index.MainEventBusIndex']
             }
         }
     }
