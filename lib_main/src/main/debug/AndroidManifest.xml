@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:label="@string/main_app_name"
         android:theme="@style/main_AppTheme">
-        <activity android:name=".debug.DebugMainActivity">
+        <activity android:name="debug.DebugMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

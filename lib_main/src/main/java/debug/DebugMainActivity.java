@@ -1,4 +1,4 @@
-package com.quyunshuo.xxx.debug;
+package debug;
 
 import android.view.View;
 
@@ -8,29 +8,23 @@ import androidx.fragment.app.FragmentTransaction;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.quyunshuo.base.base.BaseActivity;
 import com.quyunshuo.comm.route.RouteUrl;
-import com.quyunshuo.xxx.R;
-import com.quyunshuo.xxx.databinding.XxxActivityDebugBinding;
-import com.quyunshuo.xxx.ui.XxxFragment;
+import com.quyunshuo.main.R;
+import com.quyunshuo.main.databinding.MainActivityDebugBinding;
+import com.quyunshuo.main.ui.HomeFragment;
 
-/**
- * @Author: QuYunShuo
- * @Time: 2020/4/12
- * @Class: DebugXXXActivity
- * @Remark:
- */
-public class DebugXXXActivity extends BaseActivity {
+public class DebugMainActivity extends BaseActivity {
 
-    private XxxActivityDebugBinding mViewBinding;
+    private MainActivityDebugBinding mViewBinding;
 
     @Override
     protected View getViewBinding() {
-        mViewBinding = XxxActivityDebugBinding.inflate(getLayoutInflater());
+        mViewBinding = MainActivityDebugBinding.inflate(getLayoutInflater());
         return mViewBinding.getRoot();
     }
 
     @Override
     protected void initView() {
-        XxxFragment homeFragment = (XxxFragment) ARouter.getInstance().build(RouteUrl.XXX_FRAGMENT).navigation();
+        HomeFragment homeFragment = (HomeFragment) ARouter.getInstance().build(RouteUrl.HOME_FRAGMENT).navigation();
 
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
